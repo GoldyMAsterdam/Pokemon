@@ -28,16 +28,38 @@ body {
 .cards {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: repeat(12,1fr);
+    grid-template-columns: repeat(8,1fr);
     width: 100%;
+    padding: 5rem;
 }
 
 .card {
-    width: 40rem;
-    height: 40rem;
     border: 5px solid black;
     border-radius: 1.5rem;
     box-shadow: var(--shadow);
+    list-style: none;
+}
+
+.card--first {
+    grid-row: 2 / 12;
+    grid-column: 1 / 4;
+    margin-left: 8.2rem;
+    width: 60rem;
+    height: 40rem;
+}
+
+.card--second {
+    grid-row: 2 / 6;
+    grid-column: 5 / 9;
+    width: 80rem;
+    height: 40rem;
+}
+
+.card--third {
+    grid-row: 11 / 12; 
+    grid-column: 2 / 5;
+    width: 45rem;
+    height: 35rem;
 }
 
 #js--pokemon-image {
@@ -63,10 +85,6 @@ h2 {
     text-align: center;
     margin-top: 2rem;
     font-size: 2.4rem;
-}
-
-ul {
-    list-style: none;
 }
 
 button {
