@@ -5,14 +5,21 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --primary-text: #fff;
+    --shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
 html {
     box-sizing: border-box;
     font-size: 62.5%; /* 1rem = 10px */
 }
 
 body {
-    background: purple;
-    color: #333;
+    background-color: #6A1B9A;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    color: var(--primary-text);
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -20,18 +27,50 @@ body {
 
 .cards {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    width: 100%;
 }
 
 .card {
     width: 40rem;
     height: 40rem;
     border: 5px solid black;
+    border-radius: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+#js--pokemon-image {
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+    margin: 0.5rem 8rem ;
+}
+
+.success-message {
+    color: #00B74A;
+}
+
+.fail-message {
+    color: #dc3545;
+}
+
+.alreadyplayed-message {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.4rem;
+}
+
+ul {
+    list-style: none;
 }
 
 button {
+    position: absolute;
     background: #333;
     color: white;
     border: none;
@@ -39,6 +78,7 @@ button {
     font-size: 1.6rem;
     cursor: pointer;
     border-radius: 0.6rem;
+    margin-top: 25rem;
 }
 
 button:hover {
