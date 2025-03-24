@@ -4,26 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/app.js" defer></script>
+    <title>Pokémon Catch Game</title>
 </head>
 <body>
     <ul class="cards">
         <li class="card card--first">
-            <h2>Search for name</h2>
-            <ul></ul>
+            <h2>Search for Pokemon</h2>
+            <input type="text" id="js--search-input" placeholder="Enter Pokemon name">
+            <ul id="js--search-results"></ul>
         </li>
         <li class="card card--second">
-            <h2>?</h2>
-            <ul></ul>
+            <h2>Pokemon Details</h2>
+            <ul id="js--pokemon-details"></ul>
+            
+            <div class="age-predictor-container">
+                <h3>Age Predictor</h3>
+                <div class="input-group">
+                    <input type="text" id="js--name-input" placeholder="Enter a name">
+                    <select id="js--country-input">
+                        <option value="">Global</option>
+                        <option value="US">United States</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="NL">Netherlands</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="ES">Spain</option>
+                        <option value="IT">Italy</option>
+                    </select>
+                    <button id="js--predict-button">Predict Age</button>
+                </div>
+                <div id="js--age-result" class="age-result"></div>
+            </div>
         </li>
         <li class="card card--third">
             <h2 id="js--pokemon-text">A wild Pokemon appeared</h2>
-            <img id="js--pokemon-image" src="" alt="Zekrom"></li>
-            <button id="js--catch-button">Catch</button>        
+            <img id="js--pokemon-image" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png" alt="Pokemon">
+            <button id="js--catch-button">Catch</button>
         </li>
     </ul>
 </body>
