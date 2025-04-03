@@ -83,7 +83,7 @@ body {
     grid-template-rows: auto 1fr auto;
     justify-items: center;
     padding-bottom: 7rem;
-    height: 20%;
+    height: 91.8%;
 }
 
 #js--search-input {
@@ -210,7 +210,7 @@ h2 {
     .input-group {
         gap: 0.8rem;
     }
-    
+
     .age-predictor-container {
         margin-top: 2rem;
         padding-top: 1.5rem;
@@ -255,22 +255,22 @@ h2 {
 
 @media screen and (max-width: 480px) {
     html {
-        font-size: 50%; 
+        font-size: 50%;
     }
-    
+
     .cards {
         padding: 1rem;
         gap: 1.5rem;
     }
-    
+
     .card {
         padding: 1.5rem;
     }
-    
+
     #js--pokemon-image {
         width: 80%;
     }
-    
+
     h2 {
         font-size: 2rem;
     }
@@ -281,12 +281,12 @@ h2 {
         flex-direction: row;
         align-items: center;
     }
-    
+
     #js--name-input,
     #js--country-input {
         margin-right: 0.5rem;
     }
-    
+
     #js--country-input {
         width: 40%;
     }
@@ -296,7 +296,7 @@ h2 {
     .cards {
         grid-template-columns: 1fr 1.5fr;
     }
-    
+
     #js--pokemon-image {
         width: 70%;
     }
@@ -307,7 +307,7 @@ h2 {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .card--first {
         min-height: 30rem;
     }

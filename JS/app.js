@@ -53,21 +53,21 @@ async function predictAge(name, country = '') {
         ageResult.textContent = 'Please enter a name';
         return;
     }
-    
+
     try {
         let apiUrl = `https://api.agify.io/?name=${encodeURIComponent(name)}`;
         if (country) {
             apiUrl += `&country_id=${country}`;
         }
-        
+
         ageResult.innerHTML = 'Loading...';
-        
+
         const response = await fetch(apiUrl);
         const data = await response.json();
-        
+
         if (data && data.age !== null) {
             ageResult.innerHTML = `<span class="highlight">${data.name}</span> is approximately <span class="highlight">${data.age}</span> years old`;
-            
+
             if (country) {
                 ageResult.innerHTML += ` in ${countryInput.options[countryInput.selectedIndex].text}`;
             }
